@@ -44,7 +44,8 @@ module.exports = {
             const estado = clientes.dataValues.estado;
 
             const xml = xmlbuilder.create('clientes')
-            .ele('Cliente', { id: id_Cliente })
+            .ele('Cliente', { id: id_Cliente }) 
+            
                 .ele('nombre', nombre).up()
                 .ele('apellido', apellido).up()
                 .ele('telefono', telefono).up()

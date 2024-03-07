@@ -6,6 +6,9 @@ const Cliente = db.clientes;
 const xmlbuilder = require('xmlbuilder');
 
 module.exports = {
+    async hello(req, res) {
+        res.send('Hello, World!');
+    },
     async getAll(req, res) {
         await Cliente.findAll().then(clientes => {
             const xmlClientes = xmlbuilder.create('clientes');
